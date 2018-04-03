@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--搜索历史item-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/icon_sousuo"
+            android:drawablePadding="10dp"
+            android:text="运动鞋"
+            android:textColor="@color/rgb_464646"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="14dp"
+            android:background="@color/rgb_eee" />
+
+    </LinearLayout>
+</LinearLayout>

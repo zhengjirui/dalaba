@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title" />
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:background="#fff4e1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="温馨提示："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请确保支付宝信息准确无误，以免出现提现失败给您带来不便，一经提现，无法退款"/>
+    </LinearLayout>
+    <com.lechuang.dalaba.view.defineView.ClearEditText
+        android:id="@+id/et_bound_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_corners5_solidf7f7f7"
+        android:textCursorDrawable="@drawable/editcursor_solid_red_size2"
+        android:hint="支付宝帐号"
+        android:paddingLeft="13dp"
+        android:textSize="15sp" />
+
+    <com.lechuang.dalaba.view.defineView.ClearEditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_corners5_solidf7f7f7"
+        android:textCursorDrawable="@drawable/editcursor_solid_red_size2"
+        android:hint="请输入您的真实姓名"
+        android:paddingLeft="13dp"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_bound_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/main_button"
+        android:paddingLeft="13dp"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

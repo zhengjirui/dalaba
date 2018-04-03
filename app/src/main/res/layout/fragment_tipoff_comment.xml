@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        layout="@layout/activity_error"
+        android:visibility="gone" />
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.lechuang.dalaba.view.defineView.MListView
+                android:id="@+id/mlv_tipoff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@color/transparent"
+                />
+
+            <include
+                layout="@layout/common_nothing_data"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</FrameLayout>

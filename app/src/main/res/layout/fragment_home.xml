@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?><!--首页页面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:src="@drawable/shouye_logozhanwei" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="14dp"
+            android:layout_weight="1"
+            android:background="@drawable/editsharp"
+            android:drawableLeft="@drawable/icon_sousuo"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/search_show"
+            android:textColor="@color/rgb_b8b8b8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_home_sign"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/activity_error"
+            android:visibility="gone" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            android:id="@+id/refreshScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.jude.rollviewpager.RollPagerView
+                    android:id="@+id/rv_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    app:rollviewpager_play_delay="3000" />
+
+
+                <com.lechuang.dalaba.view.defineView.MGridView
+                    android:id="@+id/gv_kind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:focusable="false"
+                    android:horizontalSpacing="30dp"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="5"
+                    android:scrollbars="none"
+                    android:verticalSpacing="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_solid_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        style="@style/sp12BlackTextView"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/app_name" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/kuaibao" />
+
+                    <TextView
+                        style="@style/sp12BlackTextView"
+                        android:layout_marginLeft="8dp"
+                        android:text="抢"
+                        android:textColor="@color/main" />
+
+                    <com.lechuang.dalaba.view.defineView.AutoTextView
+                        android:id="@+id/tv_auto_text"
+                        style="@style/sp12BlackTextView"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="每日上新，打牌显示特卖，优选新品任你挑" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/rgb_eee" />
+                    <LinearLayout
+                        android:id="@+id/ll_program"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:background="#eee"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+                        <ImageView
+                            android:id="@+id/iv_program1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_program2"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_program3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY" />
+
+                                <ImageView
+                                    android:id="@+id/iv_program4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/iv_jump"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/rgb_eee" />
+
+                <ImageView
+                    android:id="@+id/lastRollViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:scaleType="fitXY" />
+
+                <com.lechuang.dalaba.view.defineView.MGridView
+                    android:id="@+id/gv_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/rgb_eee"
+                    android:focusable="false"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@color/rgb_00000000"
+                    android:numColumns="2"
+                    android:verticalSpacing="10dp" />
+
+                <!--<com.lechuang.xiaoxiao.view.defineView.MGridView
+                    android:id="@+id/gv_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:focusable="false"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@color/rgb_00000000"
+                    android:numColumns="2" />-->
+
+            </LinearLayout>
+
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+        <ImageView
+            android:id="@+id/iv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/shouye_zhidinganniu"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

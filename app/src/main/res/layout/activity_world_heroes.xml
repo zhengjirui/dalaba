@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_FF4040"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_today_rongyubang"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_shape_left_yellow"
+                android:text="今日荣誉榜"
+                />
+            <TextView
+                android:id="@+id/txt_sevenday_hero"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/c_5D5D5D"
+                android:background="@drawable/bg_shape_right_white"
+                android:text="七日英雄榜"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_shape_circle_corner" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_hero" >
+
+                <ImageView
+                    android:id="@+id/img_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_hero_first"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_below="@+id/img_first"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    >
+                    <TextView
+                        android:id="@+id/txt_user_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#A24617"
+                        android:textSize="16sp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_jiangli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#A24617"
+                        android:textSize="16sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/veeeeee"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/c_93173D"
+                    android:text="排名"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/c_93173D"
+                    android:text="账户"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/c_93173D"
+                    android:text="奖励"
+                    />
+            </LinearLayout>
+
+            <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+                android:id="@+id/refresh_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <com.lechuang.dalaba.view.defineView.MListView
+                        android:id="@+id/lv_team"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:listSelector="@color/transparent" />
+
+                    <include
+                        layout="@layout/common_nothing_data"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+            </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:le="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<android.support.v7.widget.CardView-->
+        <!--android:id="@+id/all_item_tipoff"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--cardview:cardBackgroundColor="#ffffff"-->
+        <!--cardview:cardCornerRadius="5dp"-->
+        <!--cardview:cardElevation="5dp"-->
+        <!--cardview:cardPreventCornerOverlap="false"-->
+        <!--cardview:cardUseCompatPadding="true"-->
+        <!--&gt;-->
+        <!--</android.support.v7.widget.CardView>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/ic_program_product_bg">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/zhuan_shangpinjiazai"
+                android:scaleType="centerCrop"
+                app:corner_radius="6dp"
+                app:oval="false" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_xiaoliang"
+            android:layout_width="72dp"
+            android:layout_height="21dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="9dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_corners5_solid_white"
+            android:gravity="center"
+            android:text="2222"
+            android:textColor="@color/c_5C5C5C"
+            android:textSize="9sp" />
+
+        <ImageView
+            android:id="@+id/iv_kaiqiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/kaiqiang"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <com.lechuang.dalaba.view.defineView.SpannelTextViewGrid
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        le:drawText="this is title"
+        le:shopType="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_nowprice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="800"
+            android:textColor="@color/main"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="现价 "
+                android:textColor="@color/c_696969"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_oldprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:gravity="bottom"
+                android:text="1000"
+                android:textColor="@color/c_696969"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

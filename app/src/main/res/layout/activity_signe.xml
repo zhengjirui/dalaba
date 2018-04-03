@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#4D000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_sign"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qiandao_beijing"/>
+
+            <ImageView
+                android:id="@+id/iv_dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:padding="10dp"
+                android:src="@drawable/qiandao_guanbi"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每日签到送积分"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="26dp" />
+        <TextView
+            android:id="@+id/tv_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="连续签到满7天,奖励翻倍哦~"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <GridView
+            android:id="@+id/gv_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:horizontalSpacing="0dp"
+            android:numColumns="7"
+            android:listSelector="@color/rgb_00000000" />
+
+        <Button
+            android:id="@+id/btn_sign"
+            android:layout_width="223dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:text="今日签到"
+            android:background="@drawable/main_button"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/zhuan_shangpinjiazai"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_zhuan_money"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/shouye_zhuan"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/iv_img"
+        app:layout_constraintTop_toTopOf="@+id/iv_img"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/zhuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="赚"
+            />
+        <TextView
+            android:id="@+id/zhuan_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text="123"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:maxLines="2"
+        android:textColor="@color/c_646464"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_img"
+        app:layout_constraintStart_toStartOf="@+id/iv_img"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img" />
+
+    <TextView
+        android:id="@+id/tv_xiaoliang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:singleLine="true"
+        android:text="2222"
+        android:textColor="#9C9C9C"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_img"
+        app:layout_constraintStart_toStartOf="@+id/iv_img"
+        app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_oldprice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="1000"
+        android:textColor="#9C9C9C"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_img"
+        app:layout_constraintStart_toStartOf="@+id/iv_img"
+        app:layout_constraintTop_toTopOf="@+id/tv_xiaoliang" />
+
+    <View
+        android:id="@+id/dashed"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dashed"
+        android:layerType="software"
+        app:layout_constraintTop_toBottomOf="@+id/tv_xiaoliang" />
+
+    <TextView
+        android:id="@+id/coupon_money_l"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/coupon_money_h_lab"
+        android:gravity="center"
+        android:text="券"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_img"
+        app:layout_constraintTop_toBottomOf="@+id/dashed" />
+
+    <TextView
+        android:id="@+id/coupon_money"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/coupon_money_h_value"
+        android:gravity="center"
+        android:minWidth="44dp"
+        android:textColor="@color/main"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/coupon_money_l"
+        app:layout_constraintStart_toEndOf="@+id/coupon_money_l"
+        app:layout_constraintTop_toTopOf="@+id/coupon_money_l" />
+
+    <TextView
+        android:id="@+id/tv_nowprice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=".00"
+        android:textColor="@color/main"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_img"
+        app:layout_constraintTop_toBottomOf="@+id/dashed" />
+
+    <TextView
+        android:id="@+id/tv_nowprice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:textColor="@color/main"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_nowprice2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_nowprice2" />
+
+    <TextView
+        android:id="@+id/tv_nowprice_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥"
+        android:textColor="@color/main"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_nowprice2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_nowprice1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="券后价"
+        android:textColor="@color/c_696969"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_nowprice2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_nowprice_f" />
+</android.support.constraint.ConstraintLayout>

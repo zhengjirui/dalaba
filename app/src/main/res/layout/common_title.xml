@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white">
+
+
+    <!-- android:onClick="finish"-->
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/Button_Style_0"
+        android:layout_gravity="center|left"
+        android:scaleType="center"
+        android:src="@drawable/main_fanhui" />
+
+    <ImageView
+        android:id="@+id/iv_back2"
+        style="@style/Button_Style_0"
+        android:layout_gravity="center|left"
+        android:scaleType="center"
+        android:onClick="finish"
+        android:src="@drawable/main_fanhui"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_black_back"
+        style="@style/Button_Style_0"
+        android:layout_gravity="center|left"
+        android:onClick="finish"
+        android:scaleType="center"
+        android:src="@drawable/chuangjian_fanhui"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:textColor="@color/main"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_black_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- <TextView
+         android:id="@+id/tv_right"
+         android:layout_width="wrap_content"
+         android:layout_height="50dp"
+         android:layout_gravity="right"
+         android:gravity="center"
+         android:paddingLeft="15dp"
+         android:paddingRight="15dp"
+         android:textColor="@color/rgb_ff6b80"
+         android:textSize="15sp"
+         android:visibility="gone" />-->
+
+    <ImageView
+        android:id="@+id/iv_right"
+        style="@style/Button_Style_0"
+        android:layout_gravity="right|center_vertical"
+        android:src="@drawable/shangpingxiangqing_fenxiang1"
+        android:visibility="gone" />
+    <!--
+        <ImageView
+            android:id="@+id/iv_share2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone" />-->
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone" />
+    <!--android:src="@drawable/saidan"/>-->
+
+    <TextView
+        android:id="@+id/tv_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="完成"
+        android:textColor="@color/main"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/rgb_eee" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        style="@style/textStyle"
+        android:layout_gravity="center_vertical"
+        android:onClick="finish"
+        android:text="取消"
+        android:textColor="@color/main"
+        android:visibility="gone" />
+
+</FrameLayout>
+

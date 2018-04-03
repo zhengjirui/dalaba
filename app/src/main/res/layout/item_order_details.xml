@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:le="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.lechuang.dalaba.view.defineView.SquareImageView
+            android:id="@+id/iv_orderDetail_img"
+            android:layout_width="102dp"
+            android:layout_height="102dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/zhuan_shangpinjiazai"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="7dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="10dp">
+
+                <com.lechuang.dalaba.view.defineView.SpannelTextView
+                    android:id="@+id/stv_orderDetail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    le:drawText="hhhh"
+                    le:shopType="1" />
+
+                <TextView
+                    android:id="@+id/tv_orderDetail_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所属门店:三只松鼠"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/rgb_b8b8b8"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_orderDetail_state"
+                android:layout_width="72dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_orderstate_pay"
+                android:gravity="center"
+                android:text="已付款"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/rgb_eee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_494949"
+                android:textSize="14sp"
+                android:text="付款金额"/>
+            <TextView
+                android:id="@+id/tv_orderDetail_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/c_8B8B8B"
+                android:textSize="12sp"
+                android:text="¥ 20.00"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_494949"
+                android:textSize="14sp"
+                android:text="成交预估收入"/>
+            <TextView
+                android:id="@+id/tv_orderDetail_forecast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/c_8B8B8B"
+                android:textSize="12sp"
+                android:text="¥ 20.00"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_494949"
+                android:textSize="14sp"
+                android:text="提成"/>
+            <TextView
+                android:id="@+id/tv_orderDetail_deduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/c_8B8B8B"
+                android:textSize="12sp"
+                android:text="20.00%"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_494949"
+                android:textSize="14sp"
+                android:text="来源"/>
+            <TextView
+                android:id="@+id/tv_orderDetail_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/c_8B8B8B"
+                android:textSize="12sp"
+                android:text="自购/奥**卡"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="6dp">
+        <TextView
+            android:id="@+id/tv_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:textColor="@color/c_8B8B8B"
+            android:text="2017.11.07 08:42:40 创建"/>
+
+        <TextView
+            android:id="@+id/tv_clear_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="@color/c_8B8B8B"
+            android:layout_alignParentRight="true"
+            android:text="2017.11.07 08:42:40 结算"/>
+
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/c_F3F3F3"/>
+
+</LinearLayout>

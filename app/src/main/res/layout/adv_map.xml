@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <com.lechuang.dalaba.view.defineView.ViewPagerFix
+        android:id="@+id/adv_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/viewGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/adv_pager"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="25dp">
+    </LinearLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="55dp"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingBottom="6dp"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:paddingTop="6dp"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="18sp"-->
+        <!--android:background="@drawable/go_app"-->
+        <!--android:visibility="visible"/>-->
+
+</RelativeLayout>

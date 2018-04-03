@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    >
+
+
+    <TextView
+        android:id="@+id/share_weixin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/share_weixin"
+        android:text="微信" />
+
+    <TextView
+        android:id="@+id/share_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/share_weixin_friends"
+        android:text="朋友圈" />
+
+    <TextView
+        android:id="@+id/share_qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/share_qq"
+        android:text="QQ" />
+
+    <TextView
+        android:id="@+id/share_qq_kongjian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/share_qq_kongjian"
+        android:text="QQ空间" />
+
+    <TextView
+        android:id="@+id/share_sinawbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/share_qq_kongjian"
+        android:text="新浪微博" />
+
+
+
+</LinearLayout>

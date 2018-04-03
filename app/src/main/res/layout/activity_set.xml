@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:id="@+id/line_user"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/rgb_f7f7f7"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp">
+
+        <com.lechuang.dalaba.view.defineView.XCRoundImageView
+            android:id="@+id/iv_set_head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/wode_touxiang" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="13dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_set_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="- - - -"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_set_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="- - - -" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/wode_tiaozhuan" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/line_modify_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    style="@style/myCenter"
+                    android:text="修改密码" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wode_tiaozhuan" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/rgb_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/line_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    style="@style/myCenter"
+                    android:text="意见反馈" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wode_tiaozhuan" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/rgb_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/line_update"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    style="@style/myCenter"
+                    android:text="版本信息" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="35dp"
+                    android:src="@drawable/update"
+                    android:visibility="gone" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wode_tiaozhuan" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/rgb_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/line_helpCenter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    style="@style/myCenter"
+                    android:text="帮助中心" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wode_tiaozhuan" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/rgb_EEEEEE" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_exit"
+            style="@style/myCenter"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:text="退出登录"
+            android:textColor="@color/main" />
+    </LinearLayout>
+</LinearLayout>

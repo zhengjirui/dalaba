@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lechuang.dalaba.view.defineView.SquareItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_item_add_image"
+    android:padding="1dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="+"
+        android:textSize="32dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_stroke_eee_width2dp"
+        android:scaleType="center"
+        android:src="@drawable/tianjiazhaopian" />
+
+</com.lechuang.dalaba.view.defineView.SquareItemLayout>
+

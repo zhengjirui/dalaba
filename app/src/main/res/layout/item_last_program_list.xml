@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:le="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.lechuang.dalaba.view.defineView.SquareImageView
+            android:id="@+id/iv_img"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/zhuan_shangpinjiazai"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.lechuang.dalaba.view.defineView.SpannelTextView
+                    android:id="@+id/spannelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    le:drawText="hhhh"
+                    le:shopType="1" />
+
+                <LinearLayout
+                    android:id="@+id/ll_oldPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="现价 ¥ "
+                        android:textColor="@color/c_494949"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_oldprice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/rgb_b8b8b8"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_get"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="赚 ¥"
+                        android:textColor="@color/main"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_newPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_juan_describe"
+                        android:layout_width="44dp"
+                        android:layout_height="19dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_corners5_quanhoujia"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="券后价"
+                        android:textColor="@color/c_494949"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_shoujia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="售价"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_nowprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="¥3000"
+                        android:textColor="@color/main"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_xiaoliang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="已抢203件"
+                        android:textColor="@color/c_494949"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_quanMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/bg_corners5_shouyelingquan"
+                        android:padding="5dp"
+                        android:text="领券减80"
+                        android:textColor="@color/main"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/rgb_eee" />
+</LinearLayout>

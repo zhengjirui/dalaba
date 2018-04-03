@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title" />
+
+    <LinearLayout
+        android:id="@+id/line_user"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/rgb_f7f7f7"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/line_head"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="头像"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/wode_tiaozhuan" />
+
+            <com.lechuang.dalaba.view.defineView.XCRoundImageView
+                android:id="@+id/iv_head"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="50dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wode_touxiang" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/line_set_user"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    style="@style/myCenter"
+                    android:text="用户名" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wode_tiaozhuan" />
+
+                <TextView
+                    android:id="@+id/tv_userName"
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="45dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/rgb_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/line_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    style="@style/myCenter"
+                    android:text="手机号码" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wode_tiaozhuan" />
+
+                <TextView
+                    android:id="@+id/tv_userPhone"
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="45dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/rgb_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/ll_tb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    style="@style/myCenter"
+                    android:text="淘宝账号" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wode_tiaozhuan" />
+
+                <TextView
+                    android:id="@+id/tv_userTaobao"
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="45dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/rgb_EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/line_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    style="@style/myCenter"
+                    android:text="支付宝账号" />
+
+                <ImageView
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/wode_tiaozhuan" />
+
+                <TextView
+                    android:id="@+id/tv_userPay"
+                    style="@style/myCenter_right_image"
+                    android:layout_marginRight="45dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/rgb_EEEEEE" />
+
+    </LinearLayout>
+</LinearLayout>

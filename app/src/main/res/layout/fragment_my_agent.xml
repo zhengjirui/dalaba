@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/sv_agent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/main"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="代理"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <com.lechuang.dalaba.view.defineView.XCRoundImageView
+                    android:id="@+id/iv_img"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/pic_morentouxiang" />
+
+                <Button
+                    android:id="@+id/btn_invite"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_corners5_solid00000000"
+                    android:text="邀请好友"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_all"
+                        style="@style/myAgentNum"
+                        android:layout_marginTop="15dp" />
+
+                    <TextView
+                        style="@style/myAgent"
+                        android:layout_marginTop="11dp"
+                        android:text="总收入" />
+
+                    <TextView
+                        android:id="@+id/tv_dlsr"
+                        style="@style/myAgentNum"
+                        android:layout_marginTop="30dp" />
+
+                    <TextView
+                        style="@style/myAgent"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="11dp"
+                        android:text="代理收入" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_tixian"
+                        style="@style/myAgentNum"
+                        android:layout_marginTop="15dp" />
+
+                    <TextView
+                        style="@style/myAgent"
+                        android:layout_marginTop="11dp"
+                        android:text="已提现收入" />
+
+                    <TextView
+                        android:id="@+id/tv_fx"
+                        style="@style/myAgentNum"
+                        android:layout_marginTop="30dp" />
+
+                    <TextView
+                        style="@style/myAgent"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="11dp"
+                        android:text="返现收入" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/rgb_f7f7f7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="我的团队"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="查看更多"
+                    android:textColor="@color/main"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/title_line" />
+
+            <com.lechuang.dalaba.view.defineView.MListView
+                android:id="@+id/mlv_team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_applyAgent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/daili_beijing"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main"
+            android:gravity="center"
+            android:text="代理"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/go_agent"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="350dp"
+            android:background="@drawable/main_button"
+            android:gravity="center"
+            android:text="申请代理"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/icon_wode_beijing"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_wode_shezhi" />
+
+                    <TextView
+                        android:id="@+id/iv_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="消息中心"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.lechuang.dalaba.view.defineView.XCRoundImageView
+                        android:id="@+id/iv_headImg"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/wode_touxiang" />
+
+                    <TextView
+                        android:id="@+id/tv_login_or_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="登录/注册"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/rgb_eee" />
+
+                <LinearLayout
+                    android:id="@+id/ll_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的订单"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="2dp"
+                            android:text="查看全部"
+                            android:textColor="@color/rgb_999999" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/wode_tiaozhuan" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/rgb_eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp">
+
+                    <com.lechuang.dalaba.view.defineView.MGridView
+                        android:id="@+id/gv_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:horizontalSpacing="5dp"
+                        android:listSelector="@color/rgb_00000000"
+                        android:numColumns="4"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="5dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/rgb_eee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp">
+
+                        <TextView
+                            android:id="@+id/tv_sign"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/dianjiqiandao"
+                            android:text="签到" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/rgb_eee" />
+
+                        <TextView
+                            android:id="@+id/ll_task"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/wode_renwu"
+                            android:text="任务中心"/>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/rgb_eee" />
+
+                        <TextView
+                            android:id="@+id/yingxiongbang"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/wode_yingxiongbang"
+                            android:text="英雄榜" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/rgb_eee" />
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp">
+
+                        <TextView
+                            android:id="@+id/ll_share"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/wode_zhuanqian"
+                            android:text="分享APP" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/rgb_eee" />
+
+                        <TextView
+                            android:id="@+id/ll_myagent"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/wode_hehuoren"
+                            android:text="成为代理" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/rgb_eee" />
+
+                        <TextView
+                            android:id="@+id/ll_myincom"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/wode_shouyi"
+                            android:text="我的收益" />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/rgb_eee" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp">
+
+                        <TextView
+                            android:id="@+id/ll_help"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/ic_own_help"
+                            android:text="客服中心" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/rgb_eee" />
+
+                        <TextView
+                            android:id="@+id/ll_jifen"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/icon_jifen"
+                            android:text="积分提现" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/rgb_eee" />
+
+                        <TextView
+                            android:id="@+id/ll_zhuan_money_gonglv"
+                            style="@style/My_Item_TextView"
+                            android:layout_marginTop="20dp"
+                            android:drawableTop="@drawable/zhuanqianglv"
+                            android:text="赚钱攻略" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/rgb_eee" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

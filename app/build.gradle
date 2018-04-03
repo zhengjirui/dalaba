@@ -1,0 +1,249 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    //.jpg修改成了.png就会出现问题,加上下面代码
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+
+    }
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion 19
+        targetSdkVersion 24
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        flavorDimensions ""
+    }
+    signingConfigs {
+        dalaba {
+            //签名地址
+            storeFile file("\\dalaba.jks")
+            //签名的密码
+            storePassword "123456"
+            //别名
+            keyAlias "key0"
+            //别名的密码
+            keyPassword "123456"
+        }
+        wanquanbao {
+            //签名地址
+            storeFile file("\\wanquanbao.jks")
+            //签名的密码
+            storePassword "123456"
+            //别名
+            keyAlias "key0"
+            //别名的密码
+            keyPassword "123456"
+        }
+        xingmabao {
+            //签名地址
+            storeFile file("\\xingmabao.jks")
+            //签名的密码
+            storePassword "123456"
+            //别名
+            keyAlias "key0"
+            //别名的密码
+            keyPassword "123456"
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.dalaba
+//            signingConfig signingConfigs.xingmabao
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    productFlavors {
+        //大喇叭
+        dalaba {
+            applicationId "com.lechuang.dalaba"
+            versionCode 111
+            versionName "1.1.1"
+            //微信参数
+            def wxAppid = "wxc1ec3164d76df599"
+            def wxSecret = "8f2bea8eabd9b3709784cccf520d575d"
+            //QQ参数
+            def qqAppid = "1106737061"
+            def appName = "大喇叭优惠券"
+            def appNamePinyin = "DALABA"
+            //服务器地址
+            def uri = "http://dlb.wjymz.com/"
+            //淘宝pid(百川用户pid   非常重要  注意替换)
+            def ali_PID = "mm_43889870_0_0"
+            //appkey  (百川的appkey 用于客服功能  注意替换)
+            def ali_APP_KEY = "24733108"//他们没有在线客服功能
+            def JPUSH_APPKEY = "e5e0646bb553b0a325b23b43"
+            def UMENG_APPKEY = ""//他们竟然没有加上友盟
+            signingConfig signingConfigs.dalaba
+            putParameter(it, applicationId, wxAppid,wxSecret,qqAppid,appName, appNamePinyin, uri, ali_PID, ali_APP_KEY, JPUSH_APPKEY, UMENG_APPKEY)
+        }
+        //万券包
+        wanquanbao {
+            applicationId "com.lechuang.wanquanbao"
+            versionCode 111
+            versionName "1.1.1"
+            //微信参数
+            def wxAppid = "wx771e1442215992a3"
+            def wxSecret = "b31d62ad2da803d27f8acb82abbd1b3a"
+            //QQ参数
+            def qqAppid = "1106787324"
+            def appName = "万券宝"
+            def appNamePinyin = "WANQUANBAO"
+            //服务器地址
+            def uri = "http://wjb.wjymz.com/"
+            //淘宝pid(百川用户pid   非常重要  注意替换)
+            def ali_PID = "mm_25133700_0_0"
+            //appkey  (百川的appkey 用于客服功能  注意替换)
+            def ali_APP_KEY = ""//他们没有在线客服功能
+            def JPUSH_APPKEY = "1b7eb5866519f4bc203a6f42"
+            def UMENG_APPKEY = "5a3cdaa6f29d981320000171"
+            signingConfig signingConfigs.wanquanbao
+            putParameter(it, applicationId,wxAppid,wxSecret,qqAppid, appName, appNamePinyin, uri, ali_PID, ali_APP_KEY, JPUSH_APPKEY, UMENG_APPKEY)
+        }
+        //星妈宝
+        xingmabao {
+            applicationId "com.lechuang.xingmabao"
+            versionCode 111
+            versionName "1.1.1"
+            //微信参数
+            def wxAppid = "wx07c221157598ffb6"
+            def wxSecret = "e6db3cfe103435cf5c958b48e0f4c11b"
+            //QQ参数
+            def qqAppid = "1106737061"
+            def appName = "星妈宝"
+            def appNamePinyin = "XINGMABAO"
+            //服务器地址
+            def uri = "http://xmm.wjymz.com/"
+            //淘宝pid(百川用户pid   非常重要  注意替换)
+            def ali_PID = "mm_115312769_0_0"
+            //appkey  (百川的appkey 用于客服功能  注意替换)
+            def ali_APP_KEY = "24733294"//他们没有在线客服功能
+            def JPUSH_APPKEY = "5d13b8954bef39c985c0bfef"
+            def UMENG_APPKEY = "5a3ba2618f4a9d06e400000d"
+            signingConfig signingConfigs.xingmabao
+            putParameter(it, applicationId, wxAppid,wxSecret,qqAppid,appName, appNamePinyin, uri, ali_PID, ali_APP_KEY, JPUSH_APPKEY, UMENG_APPKEY)
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+                    && 'release'.equals(variant.buildType.name)) {
+                //as3.0之后，这里的一段需要修改成这样
+                output.outputFileName = "${variant.flavorName}_v${variant.versionName}_${buildTime()}.apk"
+            }
+        }
+    }
+
+}
+repositories {
+    maven { url "https://jitpack.io" }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+static void putParameter(
+        def it, def applicationId,def wxAppid,def wxSecret,def qqAppid, def appName, def appNamePinyin, def uri, def ali_PID,
+        def ali_APP_KEY, def JPUSH_APPKEY, def UMENG_APPKEY) {
+    it.resValue "string", "app_name_res", appName
+    it.resValue "string", "app_name_pinyin_res", appNamePinyin
+    it.resValue "string", "app_agreement", "《" + appName + "用户协议》"
+    it.resValue "string", "TENCENT_QQAPPID", "tencent" + qqAppid
+    it.buildConfigField 'String', 'wxAppid', "\"${wxAppid}\""
+    it.buildConfigField 'String', 'wxSecret', "\"${wxSecret}\""
+    it.buildConfigField 'String', 'qqAppid', "\"${qqAppid}\""
+    it.buildConfigField 'String', 'app_name', "\"${appName}\""
+    it.buildConfigField 'String', 'QUrl_url', "\"${uri}\""
+    it.buildConfigField 'String', 'ali_PID', "\"${ali_PID}\""
+    it.buildConfigField 'String', 'ali_APP_KEY', "\"${ali_APP_KEY}\""
+    it.manifestPlaceholders = [
+            JPUSH_PKGNAME: applicationId,
+            JPUSH_CHANNEL: "developer-default",
+            UMENG_CHANNEL: "Channel ID",
+            JPUSH_APPKEY : JPUSH_APPKEY,
+            UMENG_APPKEY : UMENG_APPKEY,
+    ]
+}
+
+static def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmm')
+    return formattedDate
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':PullToRefresh')
+    //compile project(':LightsPush')
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    compile 'com.alibaba:fastjson:1.2.9'
+    compile 'com.alibaba.alipay:alipaySingle:20160825@jar'
+    compile 'com.ali.auth.sdk:alibabauth_core:1.1.4@jar'
+    compile 'com.ali.auth.sdk:alibabauth_ui:1.1.4@aar'
+    compile 'com.ali.auth.sdk:alibabauth_ext:1.1.4@jar'
+    compile 'com.ali.auth.sdk:alibabauth_accountlink:1.1.4@jar'
+    compile 'com.taobao.android:securityguardaar3:5.1.81@aar'
+    compile 'com.taobao.android:securitybodyaar3:5.1.25@aar'
+    compile 'com.taobao.android:mtopsdk_allinone_open:1.2.2.4@jar'
+    compile 'com.taobao.android:alibc_applink:2.0.0.9@jar'
+    compile 'com.taobao.android:utdid4all:1.1.5.3_proguard@jar'
+    compile 'com.alibaba.mtl:app-monitor-sdk:2.5.1.3_for_bc_proguard@jar'
+    compile 'com.alibaba.sdk.android:alibc_trade_sdk:3.1.1.11@aar'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    compile 'io.reactivex:rxjava:1.1.7'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.github.bumptech.glide:okhttp-integration:1.4.0'
+    compile 'pub.devrel:easypermissions:0.2.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.jude:rollviewpager:1.4.5'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.24'
+    compile 'com.github.anzaizai:EasyRefreshLayout:1.3.1'
+    compile 'id.zelory:compressor:1.0.4'
+    compile 'com.google.zxing:android-core:3.3.0'
+    compile 'com.google.zxing:core:3.3.0'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    //必选
+    compile 'com.alibaba.mobileim:IMCore:2.0.2.1@aar'
+    //可选，如果使用SDK的UI必须添加该依赖，如果不使用SDK的UI，完全自己开发UI则无需添加该依赖
+    compile 'com.alibaba.mobileim:IMKit:2.0.2.1@aar'
+    compile 'cn.jiguang.sdk:jpush:3.0.9'
+    // 此处以JPush 3.0.9 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.7'
+    // 此处以JCore 1.1.7 版本为例。
+    compile files('libs/umeng-common-1.4.0.jar')
+    compile files('libs/umerror_android_1.0.0.jar')
+    compile files('libs/SecurityEnvSDK-release-1.0.0.jar')
+    compile files('libs/umeng-analytics-7.4.0.jar')
+    implementation files('libs/open_sdk_r5990_lite.jar')
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+}
